@@ -8,8 +8,8 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface PersonMapper {
 
+    // informa o dia, mês e a ano do campo birthDate
     @Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd-MM-yyyy")
     Person toModel(PersonDTO dto);
-
     PersonDTO toDTO(Person dto);
 }

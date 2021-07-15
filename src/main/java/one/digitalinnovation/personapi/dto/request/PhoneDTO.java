@@ -23,7 +23,7 @@ public class PhoneDTO {
     @Enumerated(EnumType.STRING)
     private PhoneType type;
 
-    @NotEmpty
-    @Size(min = 13, max = 14)
+    @NotEmpty // o campo nunca pode ser vazio
+    @Size(min = 13, max = 14) // limita o tamanho do campo
     private String number;
 }

@@ -20,8 +20,8 @@ public class PersonDTO {
 
     private Long id;
 
-    @NotEmpty
-    @Size(min = 2, max = 100)
+    @NotEmpty // o campo nunca pode ser vazio
+    @Size(min = 2, max = 100) // limita o tamanho do campo
     private String firstName;
 
     @NotEmpty
@@ -35,7 +35,7 @@ public class PersonDTO {
     @NotNull
     private String birthDate;
 
-    @Valid
+    @Valid // informa que os campos precisam ser validados
     @NotEmpty
     private List<PhoneDTO> phones;
 }

@@ -17,28 +17,31 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Data
+@Entity // a classe é uma entidade
+@Data // adiciona getter e setter
 @Builder
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor // recebe os construtores
 public class Person {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // vai adicionar os ids automaticamente
     private Long id;
 
+    // nullable = false (tem campo obrigatório)
     @Column(nullable = false)
     private String firstName;
 
     @Column(nullable = false)
     private String lastName;
 
+    // unique = true (tem o valor único)
     @Column(nullable = false, unique = true)
     private String cpf;
 
     private LocalDate birthDate;
 
+    // fetch = FetchType.LAZY (obtém dados), o cascade vai aparecer no persist, merge e remove
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Phone> phones = new ArrayList<>();
 }

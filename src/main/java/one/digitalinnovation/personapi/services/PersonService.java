@@ -13,12 +13,15 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+@Service // gerencia as regras de negócio
+// cria um construtor em tempo de compilação
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonService {
 
+    // injeta o repository
     private final PersonRepository personRepository;
 
+    // injeta o mapper
     private final PersonMapper personMapper;
 
     public MessageResponseDTO create(PersonDTO personDTO) {
@@ -30,17 +33,25 @@ public class PersonService {
         return messageResponse;
     }
 
+    // vai fazer a requisição de uma pessoa pelo id
+    // PersonNotFoundException (é uma mensagem de exceção)
     public PersonDTO findById(Long id) throws PersonNotFoundException {
         Person person = personRepository.findById(id)
+                // caso não ache a pessoa vai lançar a exceção
                 .orElseThrow(() -> new PersonNotFoundException(id));
 
+        // converte do mapper para dto
         return personMapper.toDTO(person);
     }
 
+    // vai listar todos os usuários
     public List<PersonDTO> listAll() {
         List<Person> people = personRepository.findAll();
+        // stream() (menipula dados de conversão)
         return people.stream()
+                // converte para DTO
                 .map(personMapper::toDTO)
+                // retorna a lista
                 .collect(Collectors.toList());
     }
 
@@ -57,7 +68,9 @@ public class PersonService {
     }
 
     public void delete(Long id) throws PersonNotFoundException {
+        // tenta achar a pessoa por id
         personRepository.findById(id)
+                // se não achar lança a exceção
                 .orElseThrow(() -> new PersonNotFoundException(id));
 
         personRepository.deleteById(id);

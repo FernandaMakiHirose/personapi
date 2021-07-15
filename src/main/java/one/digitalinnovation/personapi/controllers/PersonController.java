@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 import java.util.List;
 
-@RestController
+@RestController // adiciona o @Controller e o @ResponseBody
 @RequestMapping("/api/v1/people")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
@@ -28,13 +28,20 @@ public class PersonController {
     private final PersonService personService;
 
     @PostMapping
+    // marca um método ou classe e o motivo deve ser retornado
     @ResponseStatus(HttpStatus.CREATED)
+
+    // a MessageResponseDTO cria: @RequestBody @Valid (faz a validação) PersonDTO personDTO
     public MessageResponseDTO create(@RequestBody @Valid PersonDTO personDTO) {
+
+        // retorna personDTO
         return personService.create(personDTO);
     }
 
+    // faz uma consulta do tipo get
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
+    // @PathVariable (indica que está fazendo uma requisição pelo id)
     public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
         return personService.findById(id);
     }
@@ -46,6 +53,8 @@ public class PersonController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
+    // @RequestBody (passa o corpo da requisição)
+    // @Valid (vai validar o código)
     public MessageResponseDTO update(@PathVariable Long id, @RequestBody @Valid PersonDTO personDTO) throws PersonNotFoundException {
         return personService.update(id, personDTO);
     }
