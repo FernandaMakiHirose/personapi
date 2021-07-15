@@ -57,8 +57,9 @@ São necessários os seguintes pré-requisitos para a execução do projeto dese
 - Dependencies: Spring Boot DevTools, Lombok, Spring Web, Spring Data JPA, Spring Boot Actuator, H2 Database.
 
 ## Heroku
-New - Create app 
-App name: restapi-peopleapi
-United States 
-Cliquem em Create app
-Selecionei o Github e coloquei o repositório do projeto
+New - Create app <br>
+App name: restapi-peopleapi <br>
+United States <br>
+Cliquem em Create app <br>
+Selecionei o Github e coloquei o repositório do projeto <br>
+Clique em Enable Automatic Deploys e Deploy Branch
