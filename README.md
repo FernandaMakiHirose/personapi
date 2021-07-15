@@ -63,7 +63,3 @@ United States <br>
 Cliquem em Create app <br>
 Selecionei o Github e coloquei o repositório do projeto <br>
 Clique em Enable Automatic Deploys e Deploy Branch
-
-## Explicando o código
-- dentro pasta mapper é onde faz a conversão do DTO para um banco de dados
-- pom.xml adicionou a dependência mapstruct e o process path do lombok e do mapstruct
