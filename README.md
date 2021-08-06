@@ -56,10 +56,10 @@ São necessários os seguintes pré-requisitos para a execução do projeto dese
 - Packing: jar
 - Dependencies: Spring Boot DevTools, Lombok, Spring Web, Spring Data JPA, Spring Boot Actuator, H2 Database.
 
-## Heroku
-New - Create app <br>
-App name: restapi-peopleapi <br>
-United States <br>
-Cliquem em Create app <br>
-Selecionei o Github e coloquei o repositório do projeto <br>
-Clique em Enable Automatic Deploys e Deploy Branch
+## Como eu subi o projeto para a nuvem - Heroku
+- New - Create app <br>
+- App name: restapi-peopleapi <br>
+- United States <br>
+- Cliquem em Create app <br>
+- Selecionei o Github e coloquei o repositório do projeto <br>
+- Clique em Enable Automatic Deploys e Deploy Branch
