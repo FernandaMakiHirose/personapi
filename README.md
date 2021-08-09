@@ -63,3 +63,8 @@ São necessários os seguintes pré-requisitos para a execução do projeto dese
 - Cliquem em Create app <br>
 - Selecionei o Github e coloquei o repositório do projeto <br>
 - Clique em Enable Automatic Deploys e Deploy Branch
+
+## Conteúdo Bônus
+- Função estática utilitária: Ela consegue se resolver por ela mesma, sem dependências externas? Os parâmetros de entrada são simples e direto? O resultado de saída também é simples e direto?
+- Programação estruturada: As tomadas de decisões são feitas de forma ordenada, por meio de verificações condicionais e interações, utilizando variáveis e rotinas para o desenvolvimento do programa.
+- Sobrecarga: Métodos com o mesmo nome, mas lista de parâmetros (assinaturas) diferentes.
