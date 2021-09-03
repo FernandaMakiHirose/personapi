@@ -1,6 +1,5 @@
 # Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring Boot
-Tópicos abordados:
-
+## Tópicos abordados
 * Setup inicial de projeto com o Spring Boot Initialzr 
 * Criação de modelo de dados para o mapeamento de entidades em bancos de dados
 * Desenvolvimento de operações de gerenciamento de usuários (Cadastro, leitura, atualização e remoção de pessoas de um sistema).
@@ -8,8 +7,19 @@ Tópicos abordados:
 * Desenvolvimento de testes unitários para validação das funcionalidades
 * Implantação do sistema na nuvem através do Heroku
 
-Para executar o projeto no terminal, digite o seguinte comando:
+## Requisitos
+* Java 11 ou versões superiores.
+* Maven 3.6.3 ou versões superiores.
+* Intellj IDEA Community Edition ou sua IDE favorita.
+* Controle de versão GIT instalado na sua máquina.
+* Conta no GitHub para o armazenamento do seu projeto na nuvem.
+* Conta no Heroku para o deploy do projeto na nuvem
 
+## Licença
+Distribuido sob a licença MIT License. Veja `LICENSE` para mais informações.
+
+## Comandos
+Para executar o projeto no terminal, digite o seguinte comando:
 shell script
 >mvn spring-boot:run 
 
@@ -19,15 +29,7 @@ Após executar o comando acima, basta apenas abrir o seguinte endereço e visual
 Para ver se o Java está instalado:
 > java --version
 
-São necessários os seguintes pré-requisitos para a execução do projeto desenvolvido durante a aula:
-
-* Java 11 ou versões superiores.
-* Maven 3.6.3 ou versões superiores.
-* Intellj IDEA Community Edition ou sua IDE favorita.
-* Controle de versão GIT instalado na sua máquina.
-* Conta no GitHub para o armazenamento do seu projeto na nuvem.
-* Conta no Heroku para o deploy do projeto na nuvem
-    
+## Documentações
 - [O que é REST API?](https://rockcontent.com/br/blog/rest-api/)
 - [Palheta de atalhos de comandos do Intellij](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 - [Site oficial do Spring Initialzr, para setup do projeto](https://start.spring.io/)
@@ -68,8 +70,3 @@ São necessários os seguintes pré-requisitos para a execução do projeto dese
 - Função estática utilitária: Ela consegue se resolver por ela mesma, sem dependências externas? Os parâmetros de entrada são simples e direto? O resultado de saída também é simples e direto?
 - Programação estruturada: As tomadas de decisões são feitas de forma ordenada, por meio de verificações condicionais e interações, utilizando variáveis e rotinas para o desenvolvimento do programa.
 - Sobrecarga: Métodos com o mesmo nome, mas lista de parâmetros (assinaturas) diferentes.
-
-## Sobre a Autora
-Oi, eu sou a Fernanda! Estou aqui para contribuir com meu conhecimento e espero poder ajudar no desenvolvimento profissional de cada um de vocês.
-
-[![Linkedin Badge](https://img.shields.io/badge/-Fernanda_Maki_Hirose-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fernanda-maki-hirose-801117208/)](https://www.linkedin.com/in/fernanda-maki-hirose-801117208/)  [![Gmail Badge](https://img.shields.io/badge/-femahi2020@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:femahi2020@gmail.com)](mailto:femahi2020@gmail.com)
